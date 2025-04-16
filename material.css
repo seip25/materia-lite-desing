@@ -670,10 +670,11 @@
   
   
   .container {
-    width: 100%;
+ 
     max-width: 1200px;
-    padding-right: var(--space-md);
-    padding-left: var(--space-md);
+      /* width: 100%;
+   padding-right: var(--space-md);
+  padding-left: var(--space-md); */
     margin-right: auto;
     margin-left: auto;
   }
