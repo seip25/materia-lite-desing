@@ -217,6 +217,12 @@
     background-color: var(--primary);
     color: var(--on-primary);
   }
+
+  article[success],
+  section[success] {
+    background-color: var(--success);
+    color: var(--on-primary);
+  }
   
   article[secondary],
   section[secondary] {

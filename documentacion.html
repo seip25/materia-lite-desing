@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Lite - Framework CSS Moderno | Documentación</title>
+    <meta name="description" content="Documentación completa del framework Material Lite. Componentes, ejemplos y guías de uso.">
+    <meta name="keywords" content="CSS Framework, Material Design, UI Components, Web Design">
+    <meta name="author" content="Tu Nombre">
+    <link rel="stylesheet" href="material.css">
+    <link rel="stylesheet" href="css/atom.css">
+    <script src="js/high.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body> 
+    <header class="sticky top-0" style="z-index: 100;">
+        <nav class="bg-primary text-white shadow-md">
+            <div class="container flex between items-center">
+                <h1 class="text-white flex items-center gap-2">
+                    <i class="icon icon-check-circle"></i> Material Lite
+                </h1>
+                <ul class="flex gap-4">
+                    <li><a href="#ejemplos" class="text-white hover:text-accent">Ejemplos</a></li>
+                    <li><a href="#documentacion" class="text-white hover:text-accent">Documentación</a></li> 
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section bg-gradient-primary text-white py-8">
+            <article class="flex column center text-center py-6">
+                <h1 class="text-3xl font-bold mb-4">Material Lite 🚀</h1>
+                <p class="text-xl mx-auto max-w-2xl">Un sistema de diseño moderno, accesible y responsive para tus proyectos web</p>
+               
+            </article>
+        </section>
+
+        <!-- Sección de Ejemplos -->
+        <section id="ejemplos" class="py-8">
+            <h2 class="text-center text-2xl font-bold mb-8">Ejemplos de Componentes ✨</h2>
+            
+            <!-- Inputs -->
+            <article class="mb-12">
+                <h3 class="text-xl font-semibold mb-4">Inputs de Formulario</h3>
+                <div class="grid cols-1 md-cols-2 gap-8">
+                    <div>
+                        <form class="card p-6">
+                            <div class="mb-4">
+                                <div >
+                                    <i class="icon icon-person"></i>
+                                    <input type="text" id="name" placeholder=" " required>
+                                    <label for="name">Nombre completo</label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div >
+                                    <i class="icon icon-email"></i>
+                                    <input type="email" id="email" placeholder=" " required>
+                                    <label for="email">Correo electrónico</label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div >
+                                    <i class="icon icon-lock"></i>
+                                    <input type="password" id="password" placeholder=" " required>
+                                    <label for="password">Contraseña</label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary w-full mt-2">
+                                <i class="icon icon-send"></i> Enviar
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="code-editor">
+                        <div class="editor-header">
+                            <span class="editor-title">inputs.html</span>
+                            <div class="editor-controls">
+                                <div class="control close"></div>
+                                <div class="control minimize"></div>
+                                <div class="control maximize"></div>
+                            </div>
+                        </div>
+                        <div class="editor-content">
+                            <pre><code class="language-html">
+&lt;!-- Input con icono --&gt;
+&lt;div &gt;
+    &lt;i class="icon icon-person"&gt;&lt;/i&gt;
+    &lt;input type="text" id="name" placeholder=" " required&gt;
+    &lt;label for="name"&gt;Nombre completo&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Input estándar --&gt;
+&lt;div &gt;
+    &lt;input type="email" id="email" placeholder=" " required&gt;
+    &lt;label for="email"&gt;Correo electrónico&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Botón de submit --&gt;
+&lt;button type="submit" class="btn btn-primary w-full"&gt;
+    &lt;i class="icon icon-send"&gt;&lt;/i&gt; Enviar
+&lt;/button&gt;
+
+
+
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Botones -->
+            <article class="mb-12">
+                <h3 class="text-xl font-semibold mb-4">Botones</h3>
+                <div class="grid cols-1 md-cols-2 gap-8">
+                    <div class="card p-6">
+                        <div class="grid cols-2 gap-4">
+                            <button class="btn">Default</button>
+                            <button class="btn btn-primary">Primary</button>
+                            <button class="btn btn-secondary">Secondary</button>
+                            <button class="btn btn-success">Success</button>
+                            <button class="btn btn-error">Error</button>
+                            <button class="btn btn-warning">Warning</button>
+                            <button class="btn btn-info">Info</button>
+                            <button class="btn btn-dark">Dark</button>
+                            <button class="btn btn-outline">Outline</button>
+                            <button class="btn btn-outline-primary">Outline Primary</button>
+                            <button class="btn btn-link">Link Button</button> 
+                            <button class="fill">
+                                <i class="icon icon-check-circle"></i> Fill
+                            </button>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="text-lg mb-3">Botones con iconos</h4>
+                            <div class="flex gap-4 flex-wrap">
+                                <button class="btn btn-primary">
+                                    <i class="icon icon-send"></i> Enviar
+                                </button>
+                                <button class="btn btn-success">
+                                    <i class="icon icon-check-circle"></i> Aprobar
+                                </button>
+                                <button class="btn btn-error">
+                                    <i class="icon icon-delete"></i> Eliminar
+                                </button>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="code-editor">
+                        <div class="editor-header">
+                            <span class="editor-title">buttons.html</span>
+                            <div class="editor-controls">
+                                <div class="control close"></div>
+                                <div class="control minimize"></div>
+                                <div class="control maximize"></div>
+                            </div>
+                        </div>
+                        <div class="editor-content">
+                            <pre><code class="language-html">
+&lt;!-- Botones básicos --&gt;
+&lt;button class="btn"&gt;Default&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+
+&lt;!-- Botones con iconos --&gt;
+&lt;button class="btn btn-primary"&gt;
+    &lt;i class="icon icon-send"&gt;&lt;/i&gt; Enviar
+&lt;/button&gt;
+
+&lt;!-- Botones outline --&gt;
+&lt;button class="btn btn-outline"&gt;Outline&lt;/button&gt;
+&lt;button class="btn btn-outline-primary"&gt;Outline Primary&lt;/button&gt;
+
+&lt;!-- Botón Fill --&gt;
+&lt;button  class="fill  w-full"&gt;
+    &lt;i class="icon icon-send"&gt;&lt;/i&gt; Enviar
+&lt;/button&gt;
+
+&lt;!-- Botón deshabilitado --&gt;
+&lt;button class="btn" disabled&gt;Disabled&lt;/button&gt;
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+            <!--Texto-->
+            <article class="mb-12">
+                <h3 class="text-xl font-semibold mb-4">Colores de texto</h3>
+                <div class="grid cols-1 md-cols-2 gap-8">
+                  <div class="card p-6">
+                    <div class="grid gap-2">
+                      <p class="text-success">Texto de éxito</p>
+                      <p class="text-error">Texto de error</p>
+                      <p class="text-secondary">Texto secundario</p>
+                      <p class="text-fill">Texto de relleno</p>
+                    </div>
+                  </div>
+              
+                  <div class="code-editor">
+                    <div class="editor-header">
+                      <span class="editor-title">text-colors.html</span>
+                      <div class="editor-controls">
+                        <div class="control close"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
+                      </div>
+                    </div>
+                    <div class="editor-content">
+                      <pre><code class="language-html">
+&lt;!-- Colores de texto --&gt;
+&lt;p class=&quot;text-success&quot;&gt;Texto de éxito&lt;/p&gt;
+&lt;p class=&quot;text-error&quot;&gt;Texto de error&lt;/p&gt;
+&lt;p class=&quot;text-secondary&quot;&gt;Texto secundario&lt;/p&gt;
+&lt;p class=&quot;text-fill&quot;&gt;Texto de relleno&lt;/p&gt;
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              
+            <!-- Cards -->
+            <article class="mb-12">
+                <h3 class="text-xl font-semibold mb-4">Tarjetas (Cards)</h3>
+                <div class="grid cols-1 md-cols-2 gap-8">
+                  <div class="grid cols-1 md-cols-2 gap-4">
+                    
+                    <div class="card">
+                      <img src="img.png" alt="Placeholder" class="w-full">
+                      <div class="p-4">
+                        <h4 class="text-lg font-semibold">Tarjeta Básica</h4>
+                        <p class="text-gray-600 mt-2">Contenido de la tarjeta. Puede incluir texto, imágenes y otros elementos.</p>
+                        <button class="btn btn-primary mt-4 w-full">Acción</button>
+                      </div>
+                    </div>
+              
+                    <div class="card shadow-lg">
+                      <div class="p-4">
+                        <h4 class="text-lg font-semibold">Tarjeta con Sombra</h4>
+                        <p class="text-gray-600 mt-2">Esta tarjeta tiene una sombra más pronunciada para mayor énfasis.</p>
+                        <div class="flex gap-2 mt-4">
+                          <button class="btn btn-outline flex-1">Cancelar</button>
+                          <button class="btn btn-primary flex-1">Aceptar</button>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <article primary >
+                      <h4 class="text-lg font-semibold">Tarjeta Primary</h4>
+                      <p class="mt-2">Ideal para destacar información importante.</p>
+                    </article>
+              
+                    <article error >
+                      <h4 class="text-lg font-semibold">Tarjeta Error</h4>
+                      <p class="mt-2">Usada para mostrar errores o advertencias críticas.</p>
+                    </article>
+              
+                    <article secondary >
+                      <h4 class="text-lg font-semibold">Tarjeta Secondary</h4>
+                      <p class="mt-2">Para contenido complementario o contexto adicional.</p>
+                    </article>
+              
+                    <article success >
+                      <h4 class="text-lg font-semibold">Tarjeta Success</h4>
+                      <p class="mt-2">Muestra mensajes de éxito o confirmación.</p>
+                    </article>
+              
+                  </div>
+              
+                  <div class="code-editor">
+                    <div class="editor-header">
+                      <span class="editor-title">cards.html</span>
+                      <div class="editor-controls">
+                        <div class="control close"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
+                      </div>
+                    </div>
+                    <div class="editor-content">
+                      <pre><code class="language-html">
+              &lt;!-- Card básica --&gt;
+              &lt;div class=&quot;card&quot;&gt;
+                &lt;img src=&quot;imagen.jpg&quot; alt=&quot;Descripción&quot; class=&quot;w-full&quot;&gt;
+                &lt;div class=&quot;p-4&quot;&gt;
+                  &lt;h4&gt;Título de la Card&lt;/h4&gt;
+                  &lt;p&gt;Contenido descriptivo...&lt;/p&gt;
+                  &lt;button class=&quot;btn btn-primary w-full mt-4&quot;&gt;Acción&lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              
+              &lt;!-- Card con sombra --&gt;
+              &lt;div class=&quot;card shadow-lg&quot;&gt;
+                &lt;div class=&quot;p-4&quot;&gt;
+                  &lt;h4&gt;Título&lt;/h4&gt;
+                  &lt;p&gt;Contenido...&lt;/p&gt;
+                  &lt;div class=&quot;flex gap-2 mt-4&quot;&gt;
+                    &lt;button class=&quot;btn btn-outline flex-1&quot;&gt;Cancelar&lt;/button&gt;
+                    &lt;button class=&quot;btn btn-primary flex-1&quot;&gt;Aceptar&lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              
+              &lt;!-- Variantes de tarjeta con fondo --&gt;
+              &lt;article primary &gt;
+                &lt;h4&gt;Tarjeta Primary&lt;/h4&gt;
+                &lt;p&gt;Ideal para destacar información importante.&lt;/p&gt;
+              &lt;/article&gt;
+              
+              &lt;article error&gt;
+                &lt;h4&gt;Tarjeta Error&lt;/h4&gt;
+                &lt;p&gt;Usada para mostrar errores o advertencias críticas.&lt;/p&gt;
+              &lt;/article&gt;
+              
+              &lt;article secondary&gt;
+                &lt;h4&gt;Tarjeta Secondary&lt;/h4&gt;
+                &lt;p&gt;Para contenido complementario o contexto adicional.&lt;/p&gt;
+              &lt;/article&gt;
+              
+              &lt;article success &gt;
+                &lt;h4&gt;Tarjeta Success&lt;/h4&gt;
+                &lt;p&gt;Muestra mensajes de éxito o confirmación.&lt;/p&gt;
+              &lt;/article&gt;
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              
+            
+            <!-- Alertas -->
+            <article class="mb-12">
+                <h3 class="text-xl font-semibold mb-4">Alertas y Notificaciones</h3>
+                <div class="grid cols-1 md-cols-2 gap-8">
+                    <div class="grid cols-1 gap-4">
+                        <div class="alert alert-success">
+                            <i class="icon icon-check-circle"></i>
+                            <div>
+                                <h4>Éxito</h4>
+                                <p>La operación se completó correctamente.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-error">
+                            <i class="icon icon-close"></i>
+                            <div>
+                                <h4>Error</h4>
+                                <p>Ocurrió un problema al procesar tu solicitud.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-warning">
+                            <i class="icon icon-warning"></i>
+                            <div>
+                                <h4>Advertencia</h4>
+                                <p>Esta acción no se puede deshacer.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <i class="icon icon-info"></i>
+                            <div>
+                                <h4>Información</h4>
+                                <p>Nuevas características disponibles en la próxima actualización.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="code-editor">
+                        <div class="editor-header">
+                            <span class="editor-title">alerts.html</span>
+                            <div class="editor-controls">
+                                <div class="control close"></div>
+                                <div class="control minimize"></div>
+                                <div class="control maximize"></div>
+                            </div>
+                        </div>
+                        <div class="editor-content">
+                            <pre><code class="language-html">
+&lt;!-- Alerta de éxito --&gt;
+&lt;div class="alert alert-success"&gt;
+    &lt;i class="icon icon-check-circle"&gt;&lt;/i&gt;
+    &lt;div&gt;
+        &lt;h4&gt;Éxito&lt;/h4&gt;
+        &lt;p&gt;Mensaje de éxito...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Alerta de error --&gt;
+&lt;div class="alert alert-error"&gt;
+    &lt;i class="icon icon-close"&gt;&lt;/i&gt;
+    &lt;div&gt;
+        &lt;h4&gt;Error&lt;/h4&gt;
+        &lt;p&gt;Mensaje de error...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Alerta de información --&gt;
+&lt;div class="alert alert-info"&gt;
+    &lt;i class="icon icon-info"&gt;&lt;/i&gt;
+    &lt;div&gt;
+        &lt;h4&gt;Información&lt;/h4&gt;
+        &lt;p&gt;Mensaje informativo...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+
+          <!--Iconos-->
+<article>
+    <h2>Icons</h2>
+    <div class="grid">
+      <div>
+        <i class="icon icon-email" title="Email"></i>
+        <i class="icon icon-lock" title="Lock"></i>
+        <i class="icon icon-search" title="Search"></i>
+        <i class="icon icon-send" title="Send"></i>
+        <i class="icon icon-add-person" title="Add Person"></i>
+        <i class="icon icon-close" title="Close"></i>
+        <i class="icon icon-check-circle" title="Check Circle"></i>
+        <i class="icon icon-delete" title="Delete"></i>
+        <i class="icon icon-add" title="Add"></i>
+      </div>
+  
+      <div>
+        <div class="code-editor">
+          <div class="editor-header">
+            <span class="editor-title">icons.html</span>
+            <div class="editor-controls">
+              <div class="control close"></div>
+              <div class="control minimize"></div>
+              <div class="control maximize"></div>
+            </div>
+          </div>
+          <div class="editor-content">
+            <pre><code class="language-html">
+  &lt;!-- Uso de iconos --&gt;
+  &lt;i class=&quot;icon icon-email&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon icon-lock&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon icon-search&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon icon-send&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon icon-add-person&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon icon-close&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon icon-check-circle&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon icon-delete&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon icon-add&quot;&gt;&lt;/i&gt;
+            </code></pre>
+          </div>
+
+         
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="code-editor">
+        <div class="editor-header">
+            <span class="editor-title">material.css</span>
+        </div>
+        <div class="editor-content">
+            <pre>
+                <code class="language-css">
+.icon-email {
+    mask-image: var(--icon-email);
+    }
+    
+    .icon-lock {
+    mask-image: var(--icon-lock);
+    }
+    
+    .icon-send {
+    mask-image: var(--icon-send);
+    }
+    
+    .icon-add-person {
+    mask-image: var(--icon-add-person);
+    }
+    
+    .icon-person {
+    mask-image: var(--icon-person);
+    }
+    
+    .icon-close {
+    mask-image: var(--icon-close);
+    }
+    
+    .icon-login {
+    mask-image: var(--icon-login);
+    }
+    
+    .icon-logout {
+    mask-image: var(--icon-logout);
+    }
+    
+    .icon-edit {
+    mask-image: var(--icon-edit);
+    }
+    
+    .icon-delete {
+    mask-image: var(--icon-delete);
+    }
+    
+    .icon-payments {
+    mask-image: var(--icon-payments);
+    }
+    
+    .icon-bar-chart {
+    mask-image: var(--icon-bar-chart);
+    }
+    
+    .icon-stores {
+    mask-image: var(--icon-stores);
+    }
+    
+    .icon-add {
+    mask-image: var(--icon-add);
+    }
+    
+    .icon-remove {
+    mask-image: var(--icon-remove);
+    }
+    
+    .icon-calendar-month {
+    mask-image: var(--icon-calendar-month);
+    }
+    
+    .icon-search {
+    mask-image: var(--icon-search);
+    }
+    
+    .icon-download {
+    mask-image: var(--icon-download);
+    }
+    
+    .icon-refresh {
+    mask-image: var(--icon-refresh);
+    }
+    
+    .icon-filter-alt {
+    mask-image: var(--icon-filter-alt);
+    }
+    
+    .icon-check-circle {
+    mask-image: var(--icon-check-circle);
+    }
+    
+    .icon-linkedin {
+    mask-image: var(--icon-linkedin);
+    }
+    
+    .icon-github {
+    mask-image: var(--icon-github);
+    }
+    
+                      
+                      
+                </code>
+            </pre>
+          </div>
+    </div>
+  </article>
+  
+
+            <!--NAV-->
+
+            <article>
+                <h2>Navbar Header</h2>
+                <div class="grid">
+                 <div>
+                  <header>
+                    <nav>
+                        <h5>Titulo Nav</h5>
+                    </nav>
+                  </header>
+                 </div>
+              
+                  <div>
+                    <div class="code-editor">
+                      <div class="editor-header">
+                        <span class="editor-title">icons.html</span>
+                        <div class="editor-controls">
+                          <div class="control close"></div>
+                          <div class="control minimize"></div>
+                          <div class="control maximize"></div>
+                        </div>
+                      </div>
+                      <div class="editor-content">
+                        <pre><code class="language-html">
+&lt;header&gt;
+    &lt;nav&gt;
+    &lt;h5&gt;Titulo Nav&lt;/h5&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+                            </code></pre>
+                            
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+        </section>
+
+ 
+
+        
+        <!-- Documentación -->
+        <section id="documentacion" class="py-8">
+            <h2 class="text-center text-2xl font-bold mb-8">Documentación 📚</h2>
+            
+            <!-- HTML Semántico -->
+            <article class="doc-section">
+                <h2>HTML Semántico 🏗️</h2>
+                <p>El HTML semántico consiste en usar elementos que describen su significado tanto para el navegador como para el desarrollador. Esto mejora la accesibilidad, el SEO y la mantenibilidad del código.</p>
+                
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold mb-2">Estructura Básica</h3>
+                    <div class="code-editor">
+                        <div class="editor-header">
+                            <span class="editor-title">estructura.html</span>
+                            <div class="editor-controls">
+                                <div class="control close"></div>
+                                <div class="control minimize"></div>
+                                <div class="control maximize"></div>
+                            </div>
+                        </div>
+                        <div class="editor-content">
+                            <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Título de la página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;!-- Menú de navegación --&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;article&gt;
+                &lt;!-- Contenido principal --&gt;
+            &lt;/article&gt;
+        &lt;/section&gt;
+        
+        &lt;aside&gt;
+            &lt;!-- Contenido secundario --&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;!-- Pie de página --&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6">
+                    <h3 class="text-lg font-semibold mb-2">Elementos Semánticos Clave</h3>
+                    <div class="grid cols-1 md-cols-2 gap-4">
+                        <div class="card p-4">
+                            <h4 class="font-semibold text-primary">&lt;header&gt;</h4>
+                            <p class="mt-2">Representa la cabecera de la página o de una sección. Normalmente contiene el logotipo, título y navegación principal.</p>
+                        </div>
+                        
+                        <div class="card p-4">
+                            <h4 class="font-semibold text-primary">&lt;nav&gt;</h4>
+                            <p class="mt-2">Contiene los enlaces de navegación principales del sitio. Debe usarse para el menú principal, no para todos los grupos de enlaces.</p>
+                        </div>
+                        
+                        <div class="card p-4">
+                            <h4 class="font-semibold text-primary">&lt;main&gt;</h4>
+                            <p class="mt-2">Contiene el contenido principal único de la página. Solo debe haber uno por documento y no debe incluir contenido que se repita en otras páginas.</p>
+                        </div>
+                        
+                        <div class="card p-4">
+                            <h4 class="font-semibold text-primary">&lt;section&gt;</h4>
+                            <p class="mt-2">Agrupa contenido temáticamente relacionado. Cada sección debe tener su propio encabezado (h2-h6).</p>
+                        </div>
+                        
+                        <div class="card p-4">
+                            <h4 class="font-semibold text-primary">&lt;article&gt;</h4>
+                            <p class="mt-2">Representa contenido auto-contenido que podría ser distribuido independientemente (posts, noticias, artículos).</p>
+                        </div>
+                        
+                        <div class="card p-4">
+                            <h4 class="font-semibold text-primary">&lt;aside&gt;</h4>
+                            <p class="mt-2">Contiene contenido relacionado pero no esencial para el contenido principal (barras laterales, publicidad, biografías del autor).</p>
+                        </div>
+                        
+                        <div class="card p-4">
+                            <h4 class="font-semibold text-primary">&lt;footer&gt;</h4>
+                            <p class="mt-2">Pie de página para el documento o sección. Suele contener información de copyright, enlaces legales, etc.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- SEO -->
+            <article class="doc-section">
+                <h2>Optimización SEO 🔍</h2>
+                <p>Mejora la visibilidad de tu sitio en los motores de búsqueda con estas prácticas recomendadas.</p>
+                
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold mb-2">Meta Tags Esenciales</h3>
+                    <div class="code-editor">
+                        <div class="editor-header">
+                            <span class="editor-title">meta-tags.html</span>
+                            <div class="editor-controls">
+                                <div class="control close"></div>
+                                <div class="control minimize"></div>
+                                <div class="control maximize"></div>
+                            </div>
+                        </div>
+                        <div class="editor-content">
+                            <pre><code class="language-html">
+&lt;head&gt;
+    &lt;!-- Codificación de caracteres --&gt;
+    &lt;meta charset="UTF-8"&gt;
+    
+    &lt;!-- Viewport para responsive design --&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    
+    &lt;!-- Título de la página (máx 60 caracteres) --&gt;
+    &lt;title&gt;Nombre de la Página - Descripción breve&lt;/title&gt;
+    
+    &lt;!-- Descripción meta (máx 160 caracteres) --&gt;
+    &lt;meta name="description" content="Descripción detallada del contenido de la página"&gt;
+    
+    &lt;!-- Palabras clave (opcional) --&gt;
+    &lt;meta name="keywords" content="palabra1, palabra2, palabra3"&gt;
+    
+    &lt;!-- Autor --&gt;
+    &lt;meta name="author" content="Nombre del Autor"&gt;
+    
+    &lt;!-- Favicon --&gt;
+    &lt;link rel="icon" href="/favicon.ico" type="image/x-icon"&gt;
+    
+    &lt;!-- Open Graph / Social Media --&gt;
+    &lt;meta property="og:title" content="Título para redes sociales"&gt;
+    &lt;meta property="og:description" content="Descripción para redes sociales"&gt;
+    &lt;meta property="og:image" content="url-de-la-imagen.jpg"&gt;
+    &lt;meta property="og:url" content="https://tusitio.com/pagina"&gt;
+    &lt;meta property="og:type" content="website"&gt;
+    
+    &lt;!-- Canonical URL --&gt;
+    &lt;link rel="canonical" href="https://tusitio.com/pagina" /&gt;
+&lt;/head&gt;
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6">
+                    <h3 class="text-lg font-semibold mb-2">Mejores Prácticas SEO</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Estructura semántica:</strong> Usa correctamente los elementos HTML5 como header, nav, main, section, article, aside y footer.</li>
+                        <li><strong>Jerarquía de encabezados:</strong> Mantén una estructura lógica de h1 a h6 (solo un h1 por página).</li>
+                        <li><strong>Atributos alt en imágenes:</strong> Siempre describe las imágenes con texto alternativo.</li>
+                        <li><strong>URLs amigables:</strong> Usa URLs descriptivas y legibles (/productos/zapatos-deportivos en lugar de /p?id=123).</li>
+                        <li><strong>Contenido de calidad:</strong> Crea contenido original, útil y bien estructurado.</li>
+                        <li><strong>Rendimiento:</strong> Optimiza el tiempo de carga (compresión de imágenes, minificación de CSS/JS).</li>
+                        <li><strong>Mobile-first:</strong> Diseña primero para móviles y usa responsive design.</li>
+                        <li><strong>Enlaces internos:</strong> Crea una buena estructura de enlaces internos.</li>
+                    </ul>
+                </div>
+            </article>
+            
+            <!-- Clases Utilitarias -->
+            <article class="doc-section">
+                <h2>Clases Utilitarias ⚡</h2>
+                <p>Material Lite incluye un conjunto de clases utilitarias para un desarrollo rápido y consistente.</p>
+                
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold mb-2">Flexbox</h3>
+                    <div class="grid cols-1 md-cols-2 gap-8">
+                        <div>
+                            <div class="flex gap-4 p-4 bg-gray-100 rounded mb-4">
+                                <div class="p-3 bg-primary text-white rounded">1</div>
+                                <div class="p-3 bg-primary text-white rounded">2</div>
+                                <div class="p-3 bg-primary text-white rounded">3</div>
+                            </div>
+                            
+                            <div class="flex between p-4 bg-gray-100 rounded mb-4">
+                                <div class="p-3 bg-primary text-white rounded">Izquierda</div>
+                                <div class="p-3 bg-primary text-white rounded">Derecha</div>
+                            </div>
+                            
+                            <div class="flex center p-4 bg-gray-100 rounded">
+                                <div class="p-3 bg-primary text-white rounded">Centrado</div>
+                            </div>
+                        </div>
+                        
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-title">flex.html</span>
+                                <div class="editor-controls">
+                                    <div class="control close"></div>
+                                    <div class="control minimize"></div>
+                                    <div class="control maximize"></div>
+                                </div>
+                            </div>
+                            <div class="editor-content">
+                                <pre><code class="language-html">
+&lt;!-- Flex básico --&gt;
+&lt;div class="flex"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Flex con espacio entre items --&gt;
+&lt;div class="flex between"&gt;
+    &lt;div&gt;Izquierda&lt;/div&gt;
+    &lt;div&gt;Derecha&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Flex centrado --&gt;
+&lt;div class="flex center"&gt;
+    &lt;div&gt;Centrado&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Flex con gap --&gt;
+&lt;div class="flex gap-4"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+&lt;/div&gt;
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6">
+                    <h3 class="text-lg font-semibold mb-2">Grid</h3>
+                    <div class="grid cols-1 md-cols-2 gap-8">
+                        <div class="grid cols-3 gap-2 mb-4">
+                            <div >1</div>
+                            <div >2</div>
+                            <div >3</div>
+                            <div >4</div>
+                            <div >5</div>
+                            <div >6</div>
+                        </div>
+                        
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-title">grid.html</span>
+                                <div class="editor-controls">
+                                    <div class="control close"></div>
+                                    <div class="control minimize"></div>
+                                    <div class="control maximize"></div>
+                                </div>
+                            </div>
+                            <div class="editor-content">
+                                <pre><code class="language-html">
+&lt;!-- Grid de 3 columnas --&gt;
+&lt;div class="grid cols-3"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+    &lt;div&gt;5&lt;/div&gt;
+    &lt;div&gt;6&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Grid responsive --&gt;
+&lt;div class="grid cols-1 md-cols-2 lg-cols-4"&gt;
+    &lt;!-- Items --&gt;
+&lt;/div&gt;
+
+&lt;!-- Grid con gap --&gt;
+&lt;div class="grid cols-2 gap-4"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+&lt;/div&gt;
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="mt-6">
+                    <h3 class="text-lg font-semibold mb-2">Grid Auto </h3>
+                    <div class="grid  gap-4">
+                        <div class="grid ">
+                            <div >1</div>
+                            <div >2</div>
+                            <div >3</div>
+                            <div >4</div>
+                            <div >5</div>
+                            <div >6</div>
+                        </div>
+                        
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-title">grid.html</span>
+                                <div class="editor-controls">
+                                    <div class="control close"></div>
+                                    <div class="control minimize"></div>
+                                    <div class="control maximize"></div>
+                                </div>
+                            </div>
+                            <div class="editor-content">
+                                <pre><code class="language-html">
+ 
+&lt;div class="grid "&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+    &lt;div&gt;5&lt;/div&gt;
+    &lt;div&gt;6&lt;/div&gt;
+&lt;/div&gt;
+
+
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </article>
+        </section>
+         
+
+    <!-- Pie de página -->
+    <footer class="  mt-4">
+        <div class="container flex between items-center">
+            <p>© 2025 Material Lite Design</p>
+        
+        </div>
+    </footer>
+</body>
+
+</html>

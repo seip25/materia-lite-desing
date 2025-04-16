@@ -1,0 +1,65 @@
+pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#abb2bf;background:#282c34}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#c678dd}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#98c379}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#d19a66}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#61aeee}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#e6c07b}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}
+
+.code-editor {
+    background: #2d2d2d;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin: 1.5rem 0;
+    overflow: hidden;
+}
+.editor-header {
+    background: #1e1e1e;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.editor-title {
+    color: #9e9e9e;
+    font-size: 0.9rem;
+}
+.editor-controls {
+    display: flex;
+    gap: 8px;
+}
+.control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.close { background: #ff5f56; }
+.minimize { background: #ffbd2e; }
+.maximize { background: #27c93f; }
+.editor-content {
+    padding: 1rem;
+    overflow-x: auto;
+}
+pre {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+}
+code {
+    color: #f8f8f2;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.doc-section {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-left: 4px solid #6200ee;
+}
+.doc-section h2 {
+    margin-top: 0;
+    color: #6200ee;
+}
+.feature-badge {
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
