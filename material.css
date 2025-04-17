@@ -11,6 +11,7 @@
   --error: #dc3545;
   --error-light: rgba(176, 0, 32, 0.1);
   --success: #10b981;
+  --dark:#2d2d2d;
   --success-light: rgba(16, 185, 129, 0.1);
   --warning: #ff9800;
   --info: #2196f3;
@@ -114,6 +115,7 @@
 
   --background: #121212;
   --surface: #1e1e1e;
+  --dark:#ffff;
 
   --error: #f28b82;
   --error-light: rgba(242, 139, 130, 0.15);
@@ -346,6 +348,13 @@ button[success],
   color: var(--surface);
 }
 
+button[dark],
+.btn-dark {
+  background-color: var(--dark);
+  border: none !important;
+  color: var(--surface);
+}
+
 header>nav {
   width: 100%;
   display: flex;
@@ -443,6 +452,18 @@ button.fill:hover,
 
 .mt-4 {
   margin-top: 2rem;
+}
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+.mb-2 {
+  margin-bottom: 1rem;
+} 
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+.mb-4 {
+  margin-bottom: 2rem;
 }
 
 .flex {
@@ -795,8 +816,12 @@ i {
 .text-success {
   color: var(--text-success) !important;
 }
-
-
+.text-light{
+  color:var(--text-light) !important;
+}
+.text-dark{
+  color:var(--text-dark)
+}
 
 .text-error {
   color: var(--error) !important;
