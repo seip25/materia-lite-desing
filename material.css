@@ -363,9 +363,7 @@ header>nav {
   justify-content: space-between;
   align-items: center;
   background-color: var(--surface);
-  color: var(--on-background); 
-   
-  
+  color: var(--on-background);    
 }
 
 header>nav h1 {
@@ -724,6 +722,7 @@ i {
   padding-right: var(--space-container);
   padding-left: var(--space-container);
   box-sizing: border-box; 
+  flex-wrap: wrap;
 }
 
 .container > * {
