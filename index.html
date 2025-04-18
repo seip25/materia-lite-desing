@@ -13,21 +13,39 @@
     <link rel="stylesheet" href="css/atom.css">
     <script src="js/high.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="js/theme.js"></script>
+    <script>
+        theme();
+    </script>
     <meta name="google-site-verification" content="X_F63szaGUDmU8TZv_IJ0GvT79Cfncj5YqBJHTKp1t0" />
 </head>
 
 <body>
-    <header class="sticky top-0" style="z-index: 100;">
-        <nav class="bg-primary text-white shadow-md">
+    <header >
+        <nav >
             <div class="container flex between items-center">
                 <h1 class="text-white flex items-center gap-2">
                     <i class="icon icon-check-circle"></i> Material Lite
                 </h1>
                 <ul class="flex gap-4">
-                    <li><a href="documentacion.html">Español</a></li>
+            
                     <li><a href="#examples">Examples</a></li>
                     <li><a href="#documentation">Documentation</a></li>
+                    <li><a href="documentacion.html">Español</a></li>
                     <li><a href="https://github.com/seip25/material-lite-design">Github</a></li>
+                </ul>
+             
+                <ul class="flex gap-2">
+                    <li>
+                        <button class="btn-secondary" onclick="theme('dark');">
+                            <i class="icon icon-dark-mode"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn-secondary" onclick="theme('light');">
+                            <i class="icon icon-light-mode"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </nav>
