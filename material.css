@@ -69,6 +69,7 @@
   --space-md: 16px;
   --space-lg: 24px;
   --space-xl: 32px;
+  --space-container:1rem;
   --label-offset: 6px;
 
   --font-size-sm: 0.875rem;
@@ -363,6 +364,7 @@ header>nav {
   align-items: center;
   background-color: var(--surface);
   color: var(--on-background); 
+   
   
 }
 
@@ -712,16 +714,21 @@ i {
   mask-repeat: no-repeat;
   mask-position: center;
 }
-
+ 
+ 
 .container,
 .container-fluid {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: var(--space-md);
-  padding-left: var(--space-md);
+  padding-right: var(--space-container);
+  padding-left: var(--space-container);
+  box-sizing: border-box; 
 }
 
+.container > * {
+  max-width: 100%;
+}
 @media (min-width:576px) {
   .container {
     max-width: 510px; 
