@@ -1496,3 +1496,34 @@ dialog[open=false] {
 .text-capitalize {
   text-transform: capitalize !important;
 }   
+
+
+textarea {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--font-size-md);
+  color: var(--on-background);
+  border: 1px solid var(--border-color, #dee2e6);
+  border-radius: var(--border-radius-md);
+  outline: none;
+  background: var(--surface);
+  transition: all 0.3s ease;
+  height: 56px;
+  box-sizing: border-box;
+  margin-bottom: var(--space-md);
+  resize: vertical;
+  min-height: 100px;
+ 
+}
+ 
+textarea:focus {
+  border: 1px solid var(--primary);
+  background-color: var(--background);
+  box-shadow: 0 2px 4px var(--text-secondary);
+}
+
+textarea::placeholder { 
+  transition: all 0.3s ease;
+}
+
+
