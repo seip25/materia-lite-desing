@@ -441,7 +441,7 @@
   
   .fill.secondary {
     background-color: var(--secondary-light);
-    color: var(--secondary-dark);
+    color: var(--text-secondary);
   }
   
   .fill.error {
@@ -454,6 +454,9 @@
     color: var(--success);
   }
   
+  .fill.dark { 
+    color: var(--text-dark);
+  }
   .text-fill {
     color: var(--primary) !important;
   }
@@ -1098,7 +1101,27 @@
   .bg-warning {
     background-color: var(--bg-warning);
   }
+  .bg-primary{
+    background-color: var(--primary);
+    color:var(--background)
+  }
+  .bg-secondary{
+    background-color: var(--secondary);
+    color: var(--on-secondary);
+  }
+  .bg-error{
+    background-color: var(--bg-error);
+    color:var(--background)
+  }
+  .bg-success{
+    background-color: var(--bg-success);
+    color:var(--background)
+  }
+  .bg-fill{
+    background-color: var(--primary-light);
+    color: var(--primary);
   
+  }
   .border-primary {
     border-color: var(--border-primary);
   }
