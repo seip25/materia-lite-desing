@@ -931,8 +931,8 @@
     }
   
     header {
-      flex-direction: column;
       gap: var(--space-sm);
+      margin-bottom: 1rem;
     }
   
     .cols-2,
@@ -1122,7 +1122,16 @@
     color: var(--primary);
   
   }
-  .border-primary {
+  .bg-light{
+    background-color: var(--background);
+  }
+  .bg-dark{
+    background-color: var(--dark);
+  }
+  .bg-surface{
+    background-color: var(--surface);
+  }
+ rder-primary {
     border-color: var(--border-primary);
   }
   
