@@ -367,6 +367,17 @@
     background-color: var(--secondary);
     color: var(--on-secondary);
   }
+  .btn-fill{
+background-color: var(--primary-light);
+  color: var(--primary);
+  border: none;
+  box-shadow: none;
+  display: inline-flex;
+  border-radius: var(--border-radius);
+  gap: var(--space-xs);
+
+
+  }
   
   button[error],
   .btn-error {
