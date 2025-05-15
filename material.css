@@ -1605,3 +1605,54 @@ textarea::placeholder {
   transition: all 0.3s ease;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--background);
+  color: var(--text-dark);
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  z-index: 1000;
+  padding: 0.5rem 0;
+}
+
+.dropdown-content.left {
+  left: 0;
+}
+
+.dropdown-content.right {
+  right: 0;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.dropdown-item:hover {
+  background-color: var(--bg-hover);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
