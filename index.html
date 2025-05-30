@@ -22,20 +22,20 @@
 </head>
 
 <body>
-    <header >
-        <nav >
+    <header>
+        <nav>
             <div class="container flex between items-center">
                 <h1 class="text-white flex items-center gap-2">
                     <i class="icon icon-check-circle"></i> Material Lite
                 </h1>
                 <ul class="flex gap-4 container">
-            
+
                     <li><a href="#examples">Examples</a></li>
                     <li><a href="#documentation">Documentation</a></li>
                     <li><a href="documentacion.html">Español</a></li>
                     <li><a href="https://github.com/seip25/material-lite-design">Github</a></li>
                 </ul>
-             
+
                 <ul class="flex gap-2">
                     <li>
                         <button class="btn-secondary" onclick="theme('dark');">
@@ -63,33 +63,46 @@
             </article>
         </section>
 
-        <section>
-            <h5>Install</h5>
-            <p>
-                You can install Material Lite by downloading "material.css" from Github (<a
-                    href="https://github.com/seip25/material-lite-design">Link</a>) and importing it.
-            </p>
-            <div class="code-editor">
-                <div class="editor-header">
-                    <span class="editor-title">install.html</span>
-                    <div class="editor-controls">
-                        <div class="control close"></div>
-                        <div class="control minimize"></div>
-                        <div class="control maximize"></div>
-                    </div>
-                </div>
-                <div class="editor-content">
-                    <pre><code class="language-html"> 
- 
-&lt;link rel="stylesheet" type="text/css" href="/path/to/material.css" /&gt;
-<!-- OR -->
- &lt;link rel="stylesheet" type="text/css" href="https://seip25.github.io/material-lite-design/material.css" /&gt;                    
- 
-        </code>
-        </pre>
-                </div>
+   <section>
+    <h2>Material Lite Design Installation - Minimalist CSS Framework</h2>
+    <p>
+        Material Lite Design is a lightweight modern CSS library that implements Material Design principles 
+        with a minimalist approach. Easily download and install to give your web projects a professional, 
+        consistent look with just a few lines of code.
+    </p>
+    
+    <div class="code-editor">
+        <div class="editor-header">
+            <span class="editor-title">install.html</span>
+            <div class="editor-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
             </div>
-        </section>
+        </div>
+        <div class="editor-content">
+            <pre><code class="language-html"> 
+&lt;!-- Install Material Lite Design from local file --&gt;
+&lt;link rel="stylesheet" href="/path/to/material.css" /&gt;
+
+&lt;!-- Or install directly from  --&gt;
+&lt;link rel="stylesheet" href="https://seip25.github.io/material-lite-design/material.css" /&gt;                    
+            </code></pre>
+        </div>
+    </div>
+    
+    <div class="feature-list">
+        <h3>Key Features:</h3>
+        <ul>
+            <li><strong>Lightweight & Fast</strong></li>
+            <li><strong>Fully Responsive</strong>: Adapts to all devices</li>
+            <li><strong>Modern UI</strong>: Material Design components with smooth animations</li>
+            <li><strong>Easy Integration</strong>: No JavaScript dependencies</li>
+            <li><strong>Customizable</strong>: Easy to theme and modify</li>
+            <li><strong>Cross-Browser</strong>: Works on all modern browsers</li>
+        </ul>
+    </div>
+</section>
 
         <!-- Examples Section -->
         <section id="examples" class="py-8">
@@ -102,19 +115,22 @@
                     <div>
                         <form class="card p-6">
                             <div class="mb-4">
-                                <div >
+                                <input type="text" id="name" placeholder="Full name " required>
+                            </div>
+
+                            <div class="mb-4">
+                                <div>
                                     <i class="icon icon-person"></i>
                                     <input type="text" id="name" placeholder="Full name " required>
-                                    
+
                                 </div>
                             </div>
-                            <input type="text" id="name" placeholder="Full name " required>
 
                             <div class="mb-4">
                                 <div class="floating">
                                     <i class="icon icon-email"></i>
                                     <input type="email" id="email" placeholder=" " required>
-                                    <label for="email">Email address</label>
+                                    <label for="email">Email (Floating)</label>
                                 </div>
                             </div>
 
@@ -126,17 +142,8 @@
                                 </div>
                             </div>
 
-                            <div class="mb-4">
-                                <div>
 
-                                    <input type="text" id="text" placeholder=" " required>
-                                    <label for="text">Input</label>
-                                </div>
-                            </div>
 
-                            <button type="submit" class=" w-full mt-2">
-                                <i class="icon icon-send"></i> Submit
-                            </button>
                         </form>
                     </div>
 
@@ -158,16 +165,19 @@
     &lt;label for="name"&gt;Full name&lt;/label&gt;
 &lt;/div&gt;
 
-&lt;!-- Standard input --&gt;
-&lt;div &gt;
-    &lt;input type="email" id="email" placeholder=" " required&gt;
-    &lt;label for="email"&gt;Email address&lt;/label&gt;
+&lt;!-- Input floating with icon --&gt;
+&lt;div class="floating" &gt;
+    &lt;i class="icon icon-person"&gt;&lt;/i&gt;
+    &lt;input type="text" id="name" placeholder=" " required&gt;
+    &lt;label for="name"&gt;Full name&lt;/label&gt;
 &lt;/div&gt;
 
-&lt;!-- Submit button --&gt;
-&lt;button type="submit" class=" w-full"&gt;
-    &lt;i class="icon icon-send"&gt;&lt;/i&gt; Submit
-&lt;/button&gt;
+&lt;!-- Standard input --&gt;
+&lt;div &gt;
+    &lt;input type="email" id="email" placeholder="Email address " required&gt;
+&lt;/div&gt;
+
+ 
                             </code></pre>
                         </div>
                     </div>
@@ -207,21 +217,36 @@
                                 <button class="fill">
                                     <i class="icon icon-check-circle"></i> Fill
                                 </button>
+                                  <button class="fill error">
+                                    <i class="icon icon-check-circle"></i> Fill error
+                                </button>
+                                  <button class="fill success">
+                                    <i class="icon icon-check-circle"></i> Fill success
+                                </button>
+                                  <button class="fill dark">
+                                    <i class="icon icon-check-circle"></i> Fill dark
+                                </button>
+                                 <button class="fill secondary">
+                                    <i class="icon icon-check-circle"></i> Fill secondary
+                                </button>
+                                 <button class="btn-fill ">
+                                    <i class="icon icon-check-circle"></i> Fill btn variant
+                                </button>
                             </div>
+                        </div>
+                </div>
+
+                <div class="code-editor">
+                    <div class="editor-header">
+                        <span class="editor-title">buttons.html</span>
+                        <div class="editor-controls">
+                            <div class="control close"></div>
+                            <div class="control minimize"></div>
+                            <div class="control maximize"></div>
                         </div>
                     </div>
-
-                    <div class="code-editor">
-                        <div class="editor-header">
-                            <span class="editor-title">buttons.html</span>
-                            <div class="editor-controls">
-                                <div class="control close"></div>
-                                <div class="control minimize"></div>
-                                <div class="control maximize"></div>
-                            </div>
-                        </div>
-                        <div class="editor-content">
-                            <pre><code class="language-html">
+                    <div class="editor-content">
+                        <pre><code class="language-html">
 &lt;!-- Basic buttons --&gt;
 &lt;button &gt;Default&lt;/button&gt;
 &lt;button class=""&gt;Primary&lt;/button&gt;
@@ -237,15 +262,41 @@
 &lt;button class="btn-outline"&gt;Outline&lt;/button&gt;
 
 &lt;!-- Fill button --&gt;
-&lt;button class="fill w-full"&gt;
+&lt;button class="fill "&gt;
+    &lt;i class="icon icon-send"&gt;&lt;/i&gt; Send
+&lt;/button&gt;
+
+&lt;!-- Fill success button --&gt;
+&lt;button class="fill success "&gt;
+    &lt;i class="icon icon-send"&gt;&lt;/i&gt; Send
+&lt;/button&gt;
+
+&lt;!-- Fill error button --&gt;
+&lt;button class="fill error "&gt;
+    &lt;i class="icon icon-send"&gt;&lt;/i&gt; Send
+&lt;/button&gt;
+
+&lt;!-- Fill dark button --&gt;
+&lt;button class="fill dark "&gt;
+    &lt;i class="icon icon-send"&gt;&lt;/i&gt; Send
+&lt;/button&gt;
+
+&lt;!-- Fill secondary button --&gt;
+&lt;button class="fill secondary "&gt;
+    &lt;i class="icon icon-send"&gt;&lt;/i&gt; Send
+&lt;/button&gt;
+
+
+&lt;!-- Fill variant button --&gt;
+&lt;button class="btn-fill"&gt;
     &lt;i class="icon icon-send"&gt;&lt;/i&gt; Send
 &lt;/button&gt;
 
 &lt;!-- Disabled button --&gt;
 &lt;button  disabled&gt;Disabled&lt;/button&gt;
                             </code></pre>
-                        </div>
                     </div>
+                </div>
                 </div>
             </article>
 
@@ -260,27 +311,27 @@
                             <p class="text-secondary">Secondary text</p>
                             <p class="text-fill">Fill text</p>
                         </div>
-                    </div>
+                </div>
 
-                    <div class="code-editor">
-                        <div class="editor-header">
-                            <span class="editor-title">text-colors.html</span>
-                            <div class="editor-controls">
-                                <div class="control close"></div>
-                                <div class="control minimize"></div>
-                                <div class="control maximize"></div>
-                            </div>
+                <div class="code-editor">
+                    <div class="editor-header">
+                        <span class="editor-title">text-colors.html</span>
+                        <div class="editor-controls">
+                            <div class="control close"></div>
+                            <div class="control minimize"></div>
+                            <div class="control maximize"></div>
                         </div>
-                        <div class="editor-content">
-                            <pre><code class="language-html">
+                    </div>
+                    <div class="editor-content">
+                        <pre><code class="language-html">
 &lt;!-- Text colors --&gt;
 &lt;p class="text-success"&gt;Success text&lt;/p&gt;
 &lt;p class="text-error"&gt;Error text&lt;/p&gt;
 &lt;p class="text-secondary"&gt;Secondary text&lt;/p&gt;
 &lt;p class="text-fill"&gt;Fill text&lt;/p&gt;
                       </code></pre>
-                        </div>
                     </div>
+                </div>
                 </div>
             </article>
 
@@ -290,7 +341,7 @@
                 <div class="grid cols-auto gap-4">
                     <div class="grid cols-1 md-cols-2 gap-4">
 
-                          <article >
+                        <article>
                             <img src="img/img.png" alt="Placeholder" class="w-full">
                             <div class="p-4">
                                 <h4 class="text-lg font-semibold">Basic Card</h4>
@@ -298,7 +349,7 @@
                                 </p>
                                 <button class=" mt-4 w-full">Action</button>
                             </div>
-                       </article>
+                        </article>
 
                         <article class="shadow">
                             <div class="p-4">
@@ -347,7 +398,7 @@
                             <pre><code class="language-html">
 &lt;!-- Basic card --&gt;
 &lt;article &gt;
-  &lt;img src="image.jpg" alt="Description" class="w-full"&gt;
+  &lt;img src="image.jpg" alt="Description" class=""&gt;
   &lt;div class="p-4"&gt;
     &lt;h4&gt;Card Title&lt;/h4&gt;
     &lt;p&gt;Descriptive content...&lt;/p&gt;
@@ -735,65 +786,67 @@
                             <h4 class="font-semibold text-primary">&lt;header&gt;</h4>
                             <p class="mt-2">Represents the header of the page or a section. Typically contains the logo,
                                 title and main navigation.</p>
-                        </div>
+                    </div>
 
-                        <article class=" p-4">
-                            <h4 class="font-semibold text-primary">&lt;nav&gt;</h4>
-                            <p class="mt-2">Contains the site's main navigation links. Should be used for the main menu,
-                                not for all link groups.</p>
-                        </div>
+                    <article class=" p-4">
+                        <h4 class="font-semibold text-primary">&lt;nav&gt;</h4>
+                        <p class="mt-2">Contains the site's main navigation links. Should be used for the main menu,
+                            not for all link groups.</p>
+                </div>
 
-                        <article class=" p-4">
-                            <h4 class="font-semibold text-primary">&lt;main&gt;</h4>
-                            <p class="mt-2">Contains the page's unique main content. There should only be one per
-                                document and it shouldn't include content that repeats on other pages.</p>
-                        </div>
+                <article class=" p-4">
+                    <h4 class="font-semibold text-primary">&lt;main&gt;</h4>
+                    <p class="mt-2">Contains the page's unique main content. There should only be one per
+                        document and it shouldn't include content that repeats on other pages.</p>
+                    </div>
 
-                        <article class=" p-4">
-                            <h4 class="font-semibold text-primary">&lt;section&gt;</h4>
-                            <p class="mt-2">Groups thematically related content. Each section should have its own
-                                heading (h2-h6).</p>
+                    <article class=" p-4">
+                        <h4 class="font-semibold text-primary">&lt;section&gt;</h4>
+                        <p class="mt-2">Groups thematically related content. Each section should have its own
+                            heading (h2-h6).</p>
                         </div>
 
                         <article class=" p-4">
                             <h4 class="font-semibold text-primary">&lt;article&gt;</h4>
                             <p class="mt-2">Represents self-contained content that could be distributed independently
                                 (posts, news, articles).</p>
-                        </div>
-
-                        <article class=" p-4">
-                            <h4 class="font-semibold text-primary">&lt;aside&gt;</h4>
-                            <p class="mt-2">Contains related but non-essential content to the main content (sidebars,
-                                advertising, author biographies).</p>
-                        </div>
-
-                        <article class=" p-4">
-                            <h4 class="font-semibold text-primary">&lt;footer&gt;</h4>
-                            <p class="mt-2">Footer for the document or section. Typically contains copyright
-                                information, legal links, etc.</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- SEO -->
-            <article class="doc-section">
-                <h2>SEO Optimization 🔍</h2>
-                <p>Improve your site's visibility in search engines with these recommended practices.</p>
-
-                <div class="mt-4">
-                    <h3 class="text-lg font-semibold mb-2">Essential Meta Tags</h3>
-                    <div class="code-editor">
-                        <div class="editor-header">
-                            <span class="editor-title">meta-tags.html</span>
-                            <div class="editor-controls">
-                                <div class="control close"></div>
-                                <div class="control minimize"></div>
-                                <div class="control maximize"></div>
                             </div>
-                        </div>
-                        <div class="editor-content">
-                            <pre><code class="language-html">
+
+                            <article class=" p-4">
+                                <h4 class="font-semibold text-primary">&lt;aside&gt;</h4>
+                                <p class="mt-2">Contains related but non-essential content to the main content
+                                    (sidebars,
+                                    advertising, author biographies).</p>
+                                </div>
+
+                                <article class=" p-4">
+                                    <h4 class="font-semibold text-primary">&lt;footer&gt;</h4>
+                                    <p class="mt-2">Footer for the document or section. Typically contains copyright
+                                        information, legal links, etc.</p>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </article>
+
+                                <!-- SEO -->
+                                <article class="doc-section">
+                                    <h2>SEO Optimization 🔍</h2>
+                                    <p>Improve your site's visibility in search engines with these recommended
+                                        practices.</p>
+
+                                    <div class="mt-4">
+                                        <h3 class="text-lg font-semibold mb-2">Essential Meta Tags</h3>
+                                        <div class="code-editor">
+                                            <div class="editor-header">
+                                                <span class="editor-title">meta-tags.html</span>
+                                                <div class="editor-controls">
+                                                    <div class="control close"></div>
+                                                    <div class="control minimize"></div>
+                                                    <div class="control maximize"></div>
+                                                </div>
+                                            </div>
+                                            <div class="editor-content">
+                                                <pre><code class="language-html">
 &lt;head&gt;
     &lt;!-- Character encoding --&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -827,66 +880,75 @@
     &lt;link rel="canonical" href="https://yoursite.com/page" /&gt;
 &lt;/head&gt;
                             </code></pre>
-                        </div>
-                    </div>
-                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                <div class="mt-6">
-                    <h3 class="text-lg font-semibold mb-2">SEO Best Practices</h3>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li><strong>Semantic structure:</strong> Correctly use HTML5 elements like header, nav, main,
-                            section, article, aside and footer.</li>
-                        <li><strong>Heading hierarchy:</strong> Maintain a logical heading structure from h1 to h6 (only
-                            one h1 per page).</li>
-                        <li><strong>Alt attributes in images:</strong> Always describe images with alternative text.
-                        </li>
-                        <li><strong>Friendly URLs:</strong> Use descriptive, readable URLs (/products/sports-shoes
-                            instead of /p?id=123).</li>
-                        <li><strong>Quality content:</strong> Create original, useful and well-structured content.</li>
-                        <li><strong>Performance:</strong> Optimize loading time (image compression, CSS/JS
-                            minification).</li>
-                        <li><strong>Mobile-first:</strong> Design first for mobile and use responsive design.</li>
-                        <li><strong>Internal links:</strong> Create a good internal linking structure.</li>
-                    </ul>
-                </div>
-            </article>
+                                    <div class="mt-6">
+                                        <h3 class="text-lg font-semibold mb-2">SEO Best Practices</h3>
+                                        <ul class="list-disc pl-6 space-y-2">
+                                            <li><strong>Semantic structure:</strong> Correctly use HTML5 elements like
+                                                header, nav, main,
+                                                section, article, aside and footer.</li>
+                                            <li><strong>Heading hierarchy:</strong> Maintain a logical heading structure
+                                                from h1 to h6 (only
+                                                one h1 per page).</li>
+                                            <li><strong>Alt attributes in images:</strong> Always describe images with
+                                                alternative text.
+                                            </li>
+                                            <li><strong>Friendly URLs:</strong> Use descriptive, readable URLs
+                                                (/products/sports-shoes
+                                                instead of /p?id=123).</li>
+                                            <li><strong>Quality content:</strong> Create original, useful and
+                                                well-structured content.</li>
+                                            <li><strong>Performance:</strong> Optimize loading time (image compression,
+                                                CSS/JS
+                                                minification).</li>
+                                            <li><strong>Mobile-first:</strong> Design first for mobile and use
+                                                responsive design.</li>
+                                            <li><strong>Internal links:</strong> Create a good internal linking
+                                                structure.</li>
+                                        </ul>
+                                    </div>
+                                </article>
 
-            <!-- Utility Classes -->
-            <article class="doc-section">
-                <h2>Utility Classes ⚡</h2>
-                <p>Material Lite includes a set of utility classes for fast and consistent development.</p>
+                                <!-- Utility Classes -->
+                                <article class="doc-section">
+                                    <h2>Utility Classes ⚡</h2>
+                                    <p>Material Lite includes a set of utility classes for fast and consistent
+                                        development.</p>
 
-                <div class="mt-4">
-                    <h3 class="text-lg font-semibold mb-2">Flexbox</h3>
-                    <div class="grid cols-auto gap-4">
-                        <div>
-                            <div class="flex gap-4 p-4 bg-gray-100 rounded mb-4">
-                                <div class="p-3 bg-primary text-white rounded">1</div>
-                                <div class="p-3 bg-primary text-white rounded">2</div>
-                                <div class="p-3 bg-primary text-white rounded">3</div>
-                            </div>
+                                    <div class="mt-4">
+                                        <h3 class="text-lg font-semibold mb-2">Flexbox</h3>
+                                        <div class="grid cols-auto gap-4">
+                                            <div>
+                                                <div class="flex gap-4 p-4 bg-gray-100 rounded mb-4">
+                                                    <div class="p-3 bg-primary text-white rounded">1</div>
+                                                    <div class="p-3 bg-primary text-white rounded">2</div>
+                                                    <div class="p-3 bg-primary text-white rounded">3</div>
+                                                </div>
 
-                            <div class="flex between p-4 bg-gray-100 rounded mb-4">
-                                <div class="p-3 bg-primary text-white rounded">Left</div>
-                                <div class="p-3 bg-primary text-white rounded">Right</div>
-                            </div>
+                                                <div class="flex between p-4 bg-gray-100 rounded mb-4">
+                                                    <div class="p-3 bg-primary text-white rounded">Left</div>
+                                                    <div class="p-3 bg-primary text-white rounded">Right</div>
+                                                </div>
 
-                            <div class="flex center p-4 bg-gray-100 rounded">
-                                <div class="p-3 bg-primary text-white rounded">Centered</div>
-                            </div>
-                        </div>
+                                                <div class="flex center p-4 bg-gray-100 rounded">
+                                                    <div class="p-3 bg-primary text-white rounded">Centered</div>
+                                                </div>
+                                            </div>
 
-                        <div class="code-editor">
-                            <div class="editor-header">
-                                <span class="editor-title">flex.html</span>
-                                <div class="editor-controls">
-                                    <div class="control close"></div>
-                                    <div class="control minimize"></div>
-                                    <div class="control maximize"></div>
-                                </div>
-                            </div>
-                            <div class="editor-content">
-                                <pre><code class="language-html">
+                                            <div class="code-editor">
+                                                <div class="editor-header">
+                                                    <span class="editor-title">flex.html</span>
+                                                    <div class="editor-controls">
+                                                        <div class="control close"></div>
+                                                        <div class="control minimize"></div>
+                                                        <div class="control maximize"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="editor-content">
+                                                    <pre><code class="language-html">
 &lt;!-- Basic flex --&gt;
 &lt;div class="flex"&gt;
     &lt;div&gt;Item 1&lt;/div&gt;
@@ -910,34 +972,34 @@
     &lt;div&gt;Item 2&lt;/div&gt;
 &lt;/div&gt;
                                 </code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                <div class="mt-6">
-                    <h3 class="text-lg font-semibold mb-2">Grid</h3>
-                    <div class="grid cols-auto gap-4">
-                        <div class="grid cols-3 gap-2 mb-4">
-                            <div>1</div>
-                            <div>2</div>
-                            <div>3</div>
-                            <div>4</div>
-                            <div>5</div>
-                            <div>6</div>
-                        </div>
+                                    <div class="mt-6">
+                                        <h3 class="text-lg font-semibold mb-2">Grid</h3>
+                                        <div class="grid cols-auto gap-4">
+                                            <div class="grid cols-3 gap-2 mb-4">
+                                                <div>1</div>
+                                                <div>2</div>
+                                                <div>3</div>
+                                                <div>4</div>
+                                                <div>5</div>
+                                                <div>6</div>
+                                            </div>
 
-                        <div class="code-editor">
-                            <div class="editor-header">
-                                <span class="editor-title">grid.html</span>
-                                <div class="editor-controls">
-                                    <div class="control close"></div>
-                                    <div class="control minimize"></div>
-                                    <div class="control maximize"></div>
-                                </div>
-                            </div>
-                            <div class="editor-content">
-                                <pre><code class="language-html">
+                                            <div class="code-editor">
+                                                <div class="editor-header">
+                                                    <span class="editor-title">grid.html</span>
+                                                    <div class="editor-controls">
+                                                        <div class="control close"></div>
+                                                        <div class="control minimize"></div>
+                                                        <div class="control maximize"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="editor-content">
+                                                    <pre><code class="language-html">
                 &lt;!-- 3-column Grid --&gt;
                 &lt;div class="grid cols-3"&gt;
                     &lt;div&gt;1&lt;/div&gt;
@@ -959,34 +1021,34 @@
                     &lt;div&gt;Item 2&lt;/div&gt;
                 &lt;/div&gt;
                                 </code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                <div class="mt-6">
-                    <h3 class="text-lg font-semibold mb-2">Auto Grid</h3>
-                    <div class="grid gap-4">
-                        <div class="grid">
-                            <div>1</div>
-                            <div>2</div>
-                            <div>3</div>
-                            <div>4</div>
-                            <div>5</div>
-                            <div>6</div>
-                        </div>
+                                    <div class="mt-6">
+                                        <h3 class="text-lg font-semibold mb-2">Auto Grid</h3>
+                                        <div class="grid gap-4">
+                                            <div class="grid">
+                                                <div>1</div>
+                                                <div>2</div>
+                                                <div>3</div>
+                                                <div>4</div>
+                                                <div>5</div>
+                                                <div>6</div>
+                                            </div>
 
-                        <div class="code-editor">
-                            <div class="editor-header">
-                                <span class="editor-title">grid.html</span>
-                                <div class="editor-controls">
-                                    <div class="control close"></div>
-                                    <div class="control minimize"></div>
-                                    <div class="control maximize"></div>
-                                </div>
-                            </div>
-                            <div class="editor-content">
-                                <pre><code class="language-html">
+                                            <div class="code-editor">
+                                                <div class="editor-header">
+                                                    <span class="editor-title">grid.html</span>
+                                                    <div class="editor-controls">
+                                                        <div class="control close"></div>
+                                                        <div class="control minimize"></div>
+                                                        <div class="control maximize"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="editor-content">
+                                                    <pre><code class="language-html">
                 
                 &lt;div class="grid"&gt;
                     &lt;div&gt;1&lt;/div&gt;
@@ -998,11 +1060,11 @@
                 &lt;/div&gt;
                 
                                 </code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
         </section>
 
         <!-- Footer -->
